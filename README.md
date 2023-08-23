@@ -105,3 +105,6 @@ Use the [titanium network discord](discord.gg/unblock) for any further questions
 - CoolElectronics#4683 - initial idea for the project, created the installer
 - Rafflesia#8396 - found user policy modification, which is used here
 - The rest of the Mercury Workshop team - assistance with testing and miscellaneous files
+- Fallenmoon8080 - Improved dev mode masking, making it nearly impossible to tell. Still under development.
+
+  RIP ultra blue
