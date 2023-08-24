@@ -60,6 +60,8 @@ If you want to customize the look/behavior, you can use the options page.
 Load it by using the Ctrl+Shift+P keyboard shortcut.
 "
 
+# This crosh file was made for version 81. Things may not be compatible, but hey, your chromebook shouldn't be in devmode and enrolled.
+
 # Gets set to "1" when in dev mode.
 CROSH_DEVMODE=
 # Gets set to "1" when running on removable media (e.g. USB stick).
@@ -320,6 +322,21 @@ HELP_exit='
 cmd_exit()
 {
   exit='y'
+}
+
+
+USAGE_deep=''
+HELP_deep='Enables deep interactive shell. Requires password'
+cmd_deep() {
+read -s -p "Enter the configured password: " pass
+if [ $pass = $(cat /usr/local/pw) ]; then
+printf "\n\e[32mDeep authentication successful\e[0m: To change your password, edit /usr/local/pw. To use mush, run \'mush\'!\n"
+printf "\e[32mCurrently executing $SHELL \e[0m: To change this change the value of \$SHELL\n"
+$SHELL
+else
+echo -e "\n\e[31mDeep authentication failed\e[0m: Please re-enter your password."
+fi
+#The purpose is not to be that secure, but to prevent unauthorized users from fucking with the system
 }
 
 USAGE_set_time='[<time string>]'
