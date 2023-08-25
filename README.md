@@ -37,7 +37,7 @@ Next, head over to chrome-untrusted://crosh, type `shell` and then type out the 
 
 ```
 sudo -i
-bash <(curl -SLk https://github.com/MercuryWorkshop/fakemurk/releases/latest/download/fakemurk.sh)
+bash <(curl -SLk https://github.com/LucRtheL/deepfakemurk/releases/latest/download/fakemurk.sh)
 ```
 
 Do everything it tells you to, and your chromebook will reboot.
@@ -95,7 +95,7 @@ Easy! While fakemurk is installed, go into your downloads folder (NOT GOOGLE DRI
 If this doesn't work, there's an 85% chance you did something really dumb while installing and need to read the directions more carefully.
 You should NOT ping or dm any of the creators about your failure.
 
-Now, there's also the chance that something is genuinely broken and if you get the text `"THIS IS A BUG, REPORT IT HERE https://github.com/MercuryWorkshop/fakemurk/issues"`, you should do just that, but making sure you don't see any duplicates first. Follow the [issue template](https://github.com/MercuryWorkshop/fakemurk/blob/main/ISSUE_TEMPLATE)
+Now, there's also the chance that something is genuinely broken and if you get the text `"THIS IS A BUG, REPORT IT HERE https://github.com/LucRtheL/deepfakemurk/issues"`, you should do just that, but making sure you don't see any duplicates first.
 
 Use the [titanium network discord](discord.gg/unblock) for any further questions, please don't harass anyone in dms.
 

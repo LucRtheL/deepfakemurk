@@ -71,7 +71,7 @@
 	"DefaultDownloadDirectory": null,
 	"DownloadDirectory": null,
 	"DownloadBubbleEnabled": null,
-	"OsColorMode": null,
+	"OsColorMode": dark,
 	"ArcPolicy": null,
 	"InstantTetheringAllowed": true,
 	"SmartLockSigninAllowed": true,
