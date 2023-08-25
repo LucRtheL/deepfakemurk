@@ -99,6 +99,12 @@ Now, there's also the chance that something is genuinely broken and if you get t
 
 Use the [titanium network discord](discord.gg/unblock) for any further questions, please don't harass anyone in dms.
 
+## DeepFakeMurk Additions/Changes
+The additions of deepfakemurk are still in development, but here is a (non)definitive list
+- Less glaring boot screen , aka turning the `os verification is off` screen to be the exact same as first boot screen frame. `not started`
+- 1 second boot time via GBB. `not started`
+- *safe mode*, which will allow users to boot with their correct policies. Still in development, but can be tested by creating a folder in downloads titled '.safe_mode' `in development`
+- Use of actual crosh. To access a shell, run 'deep' and enter the password you input during setup. Password support is complete, but changing setup to create a password hasn't been done yet. `in development`
 ## Credits
 
 - r58Playz#3467 - created bash emulators for vpd and crossystem, trawled through chromium source to find out what needed to be patched

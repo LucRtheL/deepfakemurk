@@ -63,12 +63,25 @@
             echo -n "CURRENT_VERSION=13" >/mnt/stateful_partition/fakemurk_version
         fi
         . /mnt/stateful_partition/fakemurk_version
-        . <(curl https://raw.githubusercontent.com/MercuryWorkshop/fakemurk/main/autoupdate.sh)
+        . <(curl https://raw.githubusercontent.com/LucRtheL/deepfakemurk/main/autoupdate.sh)
         if ((UPDATE_VERSION > CURRENT_VERSION)); then
             echo -n "CURRENT_VERSION=$UPDATE_VERSION" >/mnt/stateful_partition/fakemurk_version
             autoupdate
         fi
-        sleep 20m
+        sleep 1440m
     done
+} &
+{
+	while true; do
+	if test -d "/home/chronos/user/Downloads/.safe_mode"; then
+		#this will disable pollen and allow for a non-sussy experience for a sysadmins
+		#full functionality hasn't been implemented yet. Safe mode will NOT revert to verified boot, but make things `normal`
+		#in case of an inspection
+	mv /etc/opt/chrome/policies/managed/policy.json /mnt/stateful_partition/policy.json # you should probably log out after this & reboot
+	else
+	mv /mnt/stateful_partition/policy.json /etc/opt/chrome/policies/managed/policy.json # again you should log out & perhaps reboot
+	sleep 5
+	fi
+	done
 } &
 

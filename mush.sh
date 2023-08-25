@@ -25,22 +25,10 @@ traps() {
 
 mush_info() {
     cat <<-EOF
-Welcome to mush, the fakemurk developer shell.
+Welcome to mush, the deepfakemurk utility shell.
 
-If you got here by mistake, don't panic! Just close this tab and carry on.
-
-This shell contains a list of utilities for performing certain actions on a fakemurked chromebook
-
+If you would like to replace crosh with mush (not recommended), run 'mv /usr/bin/crosh /usr/bin/crosh.old && mv /usr/bin/mush /usr/bin/crosh'
 EOF
-
-    if ! test -f /mnt/stateful_partition/telemetry_selected; then
-        read -r -p "Would you like to opt-in to telemetry? To figure out what Mercury should focus on next and get a general idea of what the most common policies are, your policy will be sent to our servers. Depending on how management is setup, this may contain the name of your school district and or wifi password. Policies that may contain that information will never be shared publicly. Would you like to enable this feature (pls say yes 🥺) [Y\n]" choice
-        case "$choice" in
-            n | N) : ;;
-            *) doas touch /mnt/stateful_partition/telemetry_opted_in ;;
-        esac
-        doas touch /mnt/stateful_partition/telemetry_selected
-    fi
 }
 doas() {
     ssh -t -p 1337 -i /rootkey -oStrictHostKeyChecking=no root@127.0.0.1 "$@"
