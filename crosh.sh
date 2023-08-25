@@ -336,8 +336,9 @@ $SHELL
 else
 echo -e "\n\e[31mDeep authentication failed\e[0m: Please re-enter your password."
 fi
-#The purpose is not to be that secure, but to prevent unauthorized users from fucking with the system
+#The purpose is not to be that secure, but to confuse system administrators and not set off a red flag during inspection
 }
+
 
 USAGE_set_time='[<time string>]'
 HELP_set_time='
